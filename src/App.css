@@ -830,3 +830,16 @@
     .footer-about{font-size:12.5px;}
     .footer-contact-item{font-size:11px;}
   }
+
+  @media (max-width: 768px){
+    html,
+    body,
+    body *{
+      cursor:none !important;
+    }
+    .custom-cursor{
+      display:none !important;
+      opacity:0 !important;
+      visibility:hidden !important;
+    }
+  }

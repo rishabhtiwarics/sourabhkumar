@@ -138,6 +138,7 @@ export default function CustomCursor() {
       {/* Lagging Ring */}
       <div
         ref={ringRef}
+        className="custom-cursor custom-cursor-ring"
         style={{
           position: "fixed",
           top: 0,
@@ -156,6 +157,7 @@ export default function CustomCursor() {
       {/* Precision Center Dot */}
       <div
         ref={dotRef}
+        className="custom-cursor custom-cursor-dot"
         style={{
           position: "fixed",
           top: 0,
