@@ -8,7 +8,7 @@ function Logo() {
       <span className="mark">
         <HeartIcon />
       </span>
-      PhysioG
+      Sourabh Kumar
     </a>
   );
 }
@@ -16,7 +16,7 @@ function Logo() {
 function TopBar() {
   const messages = useMemo(
     () => [
-      { icon: <PhoneIcon />, text: "24/7 Recovery Line: +91 1800 120 555" },
+      { icon: <PhoneIcon />, text: "Call Now: +91 76919 07845" },
       { icon: <CalendarIcon stroke="currentColor" />, text: "Free First Consultation This Week" },
       { icon: <ClockIcon />, text: "Same-Day Appointments Available" },
       { icon: <StarIcon />, text: "500+ Five-Star Patient Reviews" }
@@ -52,9 +52,9 @@ function TopBar() {
             <LocationIcon />
             Sector 21, Gurugram, IN
           </span>
-          <a href="mailto:hello@physiog.in" className="topbar-item">
+          <a href="mailto:sourabh@physiog.in" className="topbar-item">
             <MailIcon />
-            hello@physiog.in
+            sourabh@physiog.in
           </a>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Sidebar({ isOpen, onClose }) {
             <span className="mark">
               <HeartIcon size={16} />
             </span>
-            <span className="sidebar-logo-text">PhysioG</span>
+            <span className="sidebar-logo-text">Sourabh Kumar</span>
           </div>
           <button className="close-btn" type="button" aria-label="Close menu" onClick={onClose}>
             <CloseIcon />

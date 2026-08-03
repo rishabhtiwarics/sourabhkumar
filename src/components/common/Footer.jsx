@@ -3,7 +3,7 @@ import { FacebookIcon, HeartIcon, InstagramIcon, LinkedInIcon, LocationIcon, Mai
 const contactItems = [
   { icon: <LocationIcon size={15} />, text: "Sector 21, Gurugram, Delhi NCR" },
   { icon: <MailIcon size={15} />, text: "hello@physiog.in", href: "mailto:hello@physiog.in" },
-  { icon: <PhoneIcon size={15} />, text: "+91 1800 120 555", href: "tel:+911800120555" }
+  { icon: <PhoneIcon size={15} />, text: "+91 76919 07845", href: "tel:+917691907845" }
 ];
 
 const socialLinks = [
@@ -22,7 +22,7 @@ export default function Footer() {
           <span className="mark">
             <HeartIcon size={16} />
           </span>
-          PhysioG
+          Sourabh Kumar
         </a>
 
         <p className="footer-about">
@@ -60,12 +60,12 @@ export default function Footer() {
 
 
         {/* Watermark vertical on left side */}
-        <div className="footer-watermark-vertical">PHYSIOG</div>
+        <div className="footer-watermark-vertical">SOURABH</div>
       </footer>
 
       {/* Copyright below the footer card */}
       <div className="footer-copybar">
-        <span>&copy; 2026 PhysioG. All rights reserved.</span>
+        <span>&copy; 2026 Sourabh Kumar. All rights reserved.</span>
       </div>
     </div>
   );

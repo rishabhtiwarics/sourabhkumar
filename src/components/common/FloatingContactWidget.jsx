@@ -41,7 +41,7 @@ export default function FloatingContactWidget() {
           <div className="contact-popup-header">
             <div className="contact-popup-badge">
               <span className="dot-pulse" />
-              CONTACT PHYSIOG
+              CONTACT SOURABH KUMAR
             </div>
             <button
               className="popup-close-btn"
@@ -105,7 +105,7 @@ export default function FloatingContactWidget() {
         <div className="floating-btn-wrapper">
           <span className="floating-btn-label whatsapp-label">Chat on WhatsApp</span>
           <a
-            href="https://wa.me/917691907845?text=Hello%20PhysioG,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            href="https://wa.me/917691907845?text=Hello%20Sourabh,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="floating-btn whatsapp-btn"
