@@ -25,6 +25,52 @@
   justify-content: center;
 }
 
+/* Hover label tooltip */
+.floating-btn-label {
+  position: absolute;
+  right: calc(100% + 12px);
+  white-space: nowrap;
+  background: #012f25;
+  color: #f4f1e9;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 7px 14px;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  box-shadow: 0 6px 18px rgba(1,47,37,0.22);
+}
+
+.floating-btn-label::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #012f25;
+}
+
+.floating-btn-wrapper:hover .floating-btn-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* WhatsApp label accent */
+.floating-btn-wrapper:hover .floating-btn-label.whatsapp-label {
+  background: #128c7e;
+}
+.floating-btn-label.whatsapp-label::after {
+  border-color: transparent transparent transparent #128c7e;
+}
+.floating-btn-wrapper:hover .floating-btn-label.whatsapp-label::after {
+  border-color: transparent transparent transparent #128c7e;
+}
+
 .floating-btn {
   width: 50px;
   height: 50px;

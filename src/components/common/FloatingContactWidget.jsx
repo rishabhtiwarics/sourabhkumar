@@ -103,6 +103,7 @@ export default function FloatingContactWidget() {
       <div className="floating-icons-stack">
         {/* WhatsApp Icon */}
         <div className="floating-btn-wrapper">
+          <span className="floating-btn-label whatsapp-label">Chat on WhatsApp</span>
           <a
             href="https://wa.me/917691907845?text=Hello%20PhysioG,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
@@ -116,6 +117,7 @@ export default function FloatingContactWidget() {
 
         {/* Phone / Contact Hover & Click Icon */}
         <div className="floating-btn-wrapper">
+          <span className="floating-btn-label">Call &amp; Address</span>
           <button
             className={`floating-btn phone-trigger-btn ${isPhonePopupOpen ? "active" : ""}`}
             onClick={() => setIsPhonePopupOpen(!isPhonePopupOpen)}
