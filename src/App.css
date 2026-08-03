@@ -282,7 +282,7 @@
   .consultation-section{
     display:flex;
     align-items:center;
-    padding:70px 22px;
+    padding:40px 22px 70px;
   }
   .consultation-card{
     width:100%;
@@ -310,17 +310,51 @@
     position:absolute;
     right:-60px;
     bottom:-60px;
-    width:220px;
-    height:220px;
+    width:240px;
+    height:240px;
     border-radius:50%;
-    border:1px solid rgba(244,241,233,.12);
+    border:1.5px solid rgba(244,241,233,.14);
+    background:radial-gradient(circle at center, rgba(217,164,85,0.08) 0%, transparent 70%);
+    pointer-events:none;
+    animation:consultationCircleFloat 8s ease-in-out infinite alternate;
   }
   .consultation-info::before{
     right:-20px;
     bottom:-20px;
-    width:150px;
-    height:150px;
-    border-color:rgba(244,241,233,.1);
+    width:160px;
+    height:160px;
+    border-color:rgba(217,164,85,.2);
+    animation:consultationCircleFloatInner 6s ease-in-out infinite alternate-reverse;
+  }
+
+  @keyframes consultationCircleFloat {
+    0% {
+      transform: translate(0, 0) scale(1);
+      border-color: rgba(244,241,233,.12);
+    }
+    50% {
+      transform: translate(-15px, -15px) scale(1.08);
+      border-color: rgba(217,164,85,.25);
+    }
+    100% {
+      transform: translate(-8px, -25px) scale(0.96);
+      border-color: rgba(244,241,233,.16);
+    }
+  }
+
+  @keyframes consultationCircleFloatInner {
+    0% {
+      transform: translate(0, 0) scale(1);
+      border-color: rgba(217,164,85,.18);
+    }
+    50% {
+      transform: translate(-12px, -8px) scale(1.12);
+      border-color: rgba(244,241,233,.22);
+    }
+    100% {
+      transform: translate(-20px, -14px) scale(1);
+      border-color: rgba(217,164,85,.28);
+    }
   }
   .consultation-eyebrow{
     display:inline-flex;

@@ -3,6 +3,7 @@ import Header from "../components/common/Header.jsx";
 import Sidebar from "../components/common/Sidebar.jsx";
 import Footer from "../components/common/Footer.jsx";
 import HeroSection from "../components/home/HeroSection.jsx";
+import TrustPillarsSection from "../components/home/TrustPillarsSection.jsx";
 import ConsultationSection from "../components/home/ConsultationSection.jsx";
 import RecoveryPathSection from "../components/home/RecoveryPathSection.jsx";
 import SymptomReliefSection from "../components/home/SymptomReliefSection.jsx";
@@ -28,6 +29,7 @@ export default function Home() {
     <>
       <Header onMenuClick={() => setIsSidebarOpen(true)} />
       <HeroSection />
+      <TrustPillarsSection />
       <ConsultationSection />
       <RecoveryPathSection />
       <SymptomReliefSection />

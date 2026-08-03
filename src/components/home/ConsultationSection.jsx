@@ -1,10 +1,53 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowIcon, CheckIcon } from "../common/Icons.jsx";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const points = ["Serving Delhi NCR", "No payment to book", "We respect your privacy"];
 
 export default function ConsultationSection() {
   const [submitted, setSubmitted] = useState(false);
+  const infoRef = useRef(null);
+
+  useEffect(() => {
+    const infoEl = infoRef.current;
+    if (!infoEl) return;
+
+    // Smooth ScrollTrigger entrance animation for Consultation Info
+    gsap.fromTo(
+      infoEl,
+      { backgroundPosition: "0% 0%" },
+      {
+        backgroundPosition: "100% 100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: infoEl,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2,
+        },
+      }
+    );
+
+    // Subtle parallax on mouse move over consultation-info
+    const handleMouseMove = (e) => {
+      const rect = infoEl.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) * 0.04;
+      const y = (e.clientY - rect.top - rect.height / 2) * 0.04;
+
+      gsap.to(infoEl, {
+        "--circle-x": `${x}px`,
+        "--circle-y": `${y}px`,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+    };
+
+    infoEl.addEventListener("mousemove", handleMouseMove);
+    return () => infoEl.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,7 +62,7 @@ export default function ConsultationSection() {
   return (
     <section className="consultation-section" id="book">
       <div className="consultation-card">
-        <div className="consultation-info">
+        <div className="consultation-info" ref={infoRef}>
           <span className="consultation-eyebrow">Free Consultation</span>
           <h2>
             We'll call you back
