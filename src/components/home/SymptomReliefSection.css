@@ -1,0 +1,294 @@
+/* ================================================================
+   SymptomReliefSection — unique prefix: srs-
+   ================================================================ */
+
+.srs-wrap {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.srs-card-container {
+  position: relative;
+  background: var(--deep);
+  border-radius: 28px;
+  padding: 70px 40px;
+  overflow: hidden;
+}
+
+/* Background canvas for ThreeJS subtle particles */
+.srs-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+.srs-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header */
+.srs-head {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.srs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.srs-eyebrow::before,
+.srs-eyebrow::after {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+.srs-head h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 560;
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--mist);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.srs-head h2 .srs-accent {
+  color: var(--gold);
+}
+
+.srs-head p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(244, 241, 233, 0.72);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ============ CARD GALLERY ============ */
+.srs-gallery {
+  display: flex;
+  gap: 16px;
+  height: 540px;
+  width: 100%;
+}
+
+.srs-pain-card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--teal);
+}
+
+.srs-gallery:hover .srs-pain-card {
+  flex: 1;
+}
+
+.srs-gallery .srs-pain-card:hover {
+  flex: 3.4;
+}
+
+/* Default active card when gallery is not hovered */
+.srs-gallery:not(:hover) .srs-pain-card.srs-default-active {
+  flex: 3.4;
+}
+
+.srs-pain-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 47, 37, 0.05) 0%,
+    rgba(1, 47, 37, 0.35) 55%,
+    rgba(1, 47, 37, 0.94) 100%
+  );
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+
+.srs-pain-card:hover::before,
+.srs-gallery:not(:hover) .srs-pain-card.srs-default-active::before {
+  background: linear-gradient(
+    100deg,
+    rgba(1, 47, 37, 0.88) 0%,
+    rgba(1, 47, 37, 0.55) 45%,
+    rgba(1, 47, 37, 0.3) 100%
+  );
+}
+
+.srs-badge {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 241, 233, 0.14);
+  border: 1px solid rgba(244, 241, 233, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--gold);
+  transition: background 0.3s ease, transform 0.4s ease, color 0.3s ease;
+}
+
+.srs-pain-card:hover .srs-badge,
+.srs-gallery:not(:hover) .srs-pain-card.srs-default-active .srs-badge {
+  background: var(--gold);
+  color: var(--deep);
+  transform: rotate(90deg);
+}
+
+.srs-num {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 2;
+  font-family: "Fraunces", serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(244, 241, 233, 0.5);
+}
+
+.srs-card-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 28px 24px 30px;
+  color: var(--mist);
+}
+
+.srs-card-title {
+  font-family: "Fraunces", serif;
+  font-weight: 560;
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.srs-card-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(244, 241, 233, 0.82);
+  max-width: 340px;
+  margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease 0.05s, margin-top 0.5s ease;
+}
+
+.srs-pain-card:hover .srs-card-desc,
+.srs-gallery:not(:hover) .srs-pain-card.srs-default-active .srs-card-desc {
+  max-height: 140px;
+  opacity: 1;
+}
+
+.srs-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.srs-pain-card:hover .srs-card-cta,
+.srs-gallery:not(:hover) .srs-pain-card.srs-default-active .srs-card-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.srs-card-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.srs-pain-card:hover .srs-card-cta:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Breakpoints matching site theme */
+@media (max-width: 980px) {
+  .srs-card-container {
+    padding: 50px 24px;
+    border-radius: 24px;
+  }
+  .srs-gallery {
+    height: auto;
+    flex-direction: column;
+  }
+  .srs-pain-card {
+    flex: none !important;
+    height: 110px;
+    transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .srs-pain-card:hover {
+    height: 320px;
+  }
+  .srs-gallery:not(:hover) .srs-pain-card.srs-default-active {
+    height: 320px;
+  }
+  .srs-badge,
+  .srs-num {
+    top: 16px;
+  }
+  .srs-badge {
+    left: 16px;
+  }
+  .srs-num {
+    right: 16px;
+  }
+  .srs-card-body {
+    padding: 20px;
+  }
+  .srs-card-title {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 620px) {
+  .srs-card-container {
+    padding: 40px 16px;
+    border-radius: 20px;
+  }
+  .srs-head p {
+    font-size: 14.5px;
+  }
+}

@@ -5,6 +5,7 @@ import Footer from "../components/common/Footer.jsx";
 import HeroSection from "../components/home/HeroSection.jsx";
 import ConsultationSection from "../components/home/ConsultationSection.jsx";
 import RecoveryPathSection from "../components/home/RecoveryPathSection.jsx";
+import SymptomReliefSection from "../components/home/SymptomReliefSection.jsx";
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -29,6 +30,8 @@ export default function Home() {
       <HeroSection />
       <ConsultationSection />
       <RecoveryPathSection />
+      <SymptomReliefSection />
+
 
       <Footer />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
