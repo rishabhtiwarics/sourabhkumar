@@ -1,0 +1,106 @@
+/* ================================================================
+   MarqueeBanner — unique prefix: mqb-
+   ================================================================ */
+
+/* Outer wrapper — left/right spacing same as page-wrap, rounds top corners */
+/* Outer wrapper — Full width layout */
+.mqb-wrap {
+  padding: 0;
+  width: 100%;
+}
+
+.mqb-strip {
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 0;   /* no rounded corners */
+  position: relative;
+  border: none;
+}
+
+/* Left & Right gradient fade overlay so text doesn't cut abruptly */
+.mqb-strip::before,
+.mqb-strip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mqb-strip::before {
+  left: 0;
+  background: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.mqb-strip::after {
+  right: 0;
+  background: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* ---- track ---- */
+.mqb-track {
+  display: flex;
+  width: max-content;
+  animation: mqb-scroll 55s linear infinite;   /* Slower marquee speed */
+}
+
+.mqb-track:hover {
+  animation-play-state: paused;
+}
+
+/* duplicate set so the scroll loops seamlessly */
+.mqb-set {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+/* single item */
+.mqb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  white-space: nowrap;
+  font-family: 'Fraunces', serif;
+  font-size: clamp(15px, 1.6vw, 20px);
+  font-weight: 600;
+  color: var(--deep);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+/* divider dot between items */
+.mqb-dot {
+  display: none;
+}
+
+/* icon */
+.mqb-icon {
+  display: flex;
+  align-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* gold highlight word */
+.mqb-gold {
+  color: var(--teal);
+}
+
+/* scroll animation */
+@keyframes mqb-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---- responsive ---- */
+@media (max-width: 768px) {
+  .mqb-item {
+    padding: 14px 24px;
+    gap: 10px;
+  }
+}

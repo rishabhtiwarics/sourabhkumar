@@ -1,4 +1,5 @@
 import { FacebookIcon, HeartIcon, InstagramIcon, LinkedInIcon, LocationIcon, MailIcon, PhoneIcon, YouTubeIcon } from "./Icons.jsx";
+import MarqueeBanner from "./MarqueeBanner.jsx";
 
 const contactItems = [
   { icon: <LocationIcon size={15} />, text: "Sector 21, Gurugram, Delhi NCR" },
@@ -16,6 +17,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <div className="page-wrap footer-wrap">
+      <MarqueeBanner />
       <footer className="site-footer" id="contact">
 
         <a href="#home" className="footer-logo">
