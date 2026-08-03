@@ -83,16 +83,27 @@ function RecoveryLine({ rowRef }) {
       if (cards.length < 2) return;
 
       const rowRect = row.getBoundingClientRect();
-      const centers = Array.from(cards).map((c) => {
+      const points = Array.from(cards).map((c) => {
         const r = c.getBoundingClientRect();
-        return r.left + r.width / 2 - rowRect.left;
+        return {
+          x: r.left + r.width / 2 - rowRect.left,
+          y: r.top + r.height / 2 - rowRect.top,
+        };
       });
 
-      const y = 36; // same as top:34px + half icon height offset
-      let d = `M ${centers[0]} ${y}`;
-      for (let i = 1; i < centers.length; i++) {
-        const mx = (centers[i - 1] + centers[i]) / 2;
-        d += ` C ${mx} ${y - 10}, ${mx} ${y + 10}, ${centers[i]} ${y}`;
+      let d = `M ${points[0].x} ${points[0].y}`;
+      for (let i = 1; i < points.length; i++) {
+        const p1 = points[i - 1];
+        const p2 = points[i];
+        const mx = (p1.x + p2.x) / 2;
+        const my = (p1.y + p2.y) / 2;
+        if (Math.abs(p1.y - p2.y) < 10) {
+          // Horizontal line segment
+          d += ` C ${mx} ${p1.y - 10}, ${mx} ${p1.y + 10}, ${p2.x} ${p2.y}`;
+        } else {
+          // Curve connecting rows (S-curve)
+          d += ` C ${p1.x} ${my}, ${p2.x} ${my}, ${p2.x} ${p2.y}`;
+        }
       }
       path.setAttribute("d", d);
 
