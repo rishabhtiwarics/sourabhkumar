@@ -72,7 +72,7 @@
   .topbar-right{gap:14px;}
   /* ============ PAGE WRAP â€” margin around hero, body colour bleeds through ============ */
   .page-wrap{
-    padding:0 22px 22px;
+    padding:0 22px 0;
   }
 
   /* ============ HERO â€” inset card with its own bg image + overlay ============ */
@@ -277,6 +277,292 @@
     #hero-animation-wrapper{width:92%;height:150px;}
   }
 
+
+  /* ============ CONSULTATION SECTION ============ */
+  .consultation-section{
+    display:flex;
+    align-items:center;
+    padding:70px 22px;
+  }
+  .consultation-card{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:.85fr 1fr;
+    border-radius:28px;
+    overflow:visible;
+    box-shadow:0 30px 70px rgba(1,47,37,.16);
+  }
+  .consultation-info{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color:var(--mist);
+    background:linear-gradient(155deg, var(--teal) 0%, var(--deep) 100%);
+    border-radius:28px 0 0 28px;
+    padding:48px 44px;
+  }
+  .consultation-info::after,
+  .consultation-info::before{
+    content:"";
+    position:absolute;
+    right:-60px;
+    bottom:-60px;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:1px solid rgba(244,241,233,.12);
+  }
+  .consultation-info::before{
+    right:-20px;
+    bottom:-20px;
+    width:150px;
+    height:150px;
+    border-color:rgba(244,241,233,.1);
+  }
+  .consultation-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:16px;
+  }
+  .consultation-eyebrow::before{
+    content:"";
+    width:22px;
+    height:2px;
+    background:var(--gold);
+  }
+  .consultation-info h2{
+    font-size:clamp(24px, 2.6vw, 32px);
+    font-weight:560;
+    line-height:1.2;
+    margin-bottom:14px;
+  }
+  .consultation-info p{
+    max-width:340px;
+    font-size:14.5px;
+    line-height:1.7;
+    color:rgba(244,241,233,.78);
+    margin-bottom:28px;
+  }
+  .consultation-points{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .consultation-point{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:13.5px;
+    color:rgba(244,241,233,.88);
+  }
+  .consultation-point svg{
+    flex-shrink:0;
+    color:var(--gold);
+  }
+  .consultation-form{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:18px;
+    background:var(--mist-dim);
+    border-radius:0 28px 28px 0;
+    padding:48px 44px;
+  }
+  .consultation-free-badge{
+    position:absolute;
+    top:-13px;
+    right:22px;
+    z-index:3;
+    width:clamp(92px, 16vw, 126px);
+    min-height:28px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    border-radius:999px;
+    background:var(--gold);
+    color:#000000;
+    font-size:12px;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:.04em;
+    white-space:nowrap;
+    box-shadow:0 10px 22px rgba(217,164,85,.22);
+  }  .consultation-form-title{
+    font-size:13px;
+    font-weight:700;
+    color:var(--teal);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:2px;
+  }
+  .consultation-field{
+    width:100%;
+  }
+  .consultation-field label{
+    display:block;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:var(--deep);
+    margin-bottom:7px;
+  }
+  .consultation-field input{
+    width:100%;
+    font-family:inherit;
+    font-size:15px;
+    color:var(--deep);
+    background:#FFFFFF;
+    border:1.5px solid var(--line);
+    border-radius:999px;
+    padding:13px 16px;
+    outline:none;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  .consultation-field input::placeholder{
+    color:rgba(1,47,37,.38);
+  }
+  .consultation-field input:focus{
+    border-color:var(--teal-soft);
+    box-shadow:0 0 0 4px rgba(3,93,78,.1);
+  }
+  .consultation-tel-wrap{
+    display:flex;
+    gap:8px;
+  }
+  .consultation-tel-code{
+    flex-shrink:0;
+    width:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--deep);
+    background:#FFFFFF;
+    border:1.5px solid var(--line);
+    border-radius:999px;
+    font-size:15px;
+    font-weight:700;
+    text-align:center;
+  }
+  .consultation-actions{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .consultation-submit{
+    width:fit-content;
+    max-width:100%;
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    background:var(--deep);
+    color:var(--mist);
+    font-family:inherit;
+    font-weight:800;
+    font-size:14px;
+    line-height:1;
+    padding:8px 10px 8px 18px;
+    border:1px solid rgba(244,241,233,.16);
+    border-radius:999px;
+    box-shadow:0 14px 28px rgba(1,47,37,.16);
+    cursor:pointer;
+    transition:background .2s, color .2s, border-color .2s, box-shadow .2s, transform .2s;
+  }
+  .consultation-submit:hover:not(:disabled){
+    background:var(--teal);
+    border-color:rgba(217,164,85,.42);
+    color:var(--mist);
+    box-shadow:0 18px 34px rgba(1,47,37,.22);
+    transform:translateY(-1px);
+  }
+  .consultation-submit:disabled{
+    cursor:default;
+    opacity:.86;
+    transform:none;
+  }
+  .consultation-submit-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--gold);
+    color:var(--deep);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    box-shadow:inset 0 0 0 1px rgba(1,47,37,.08);
+    transition:background .2s, color .2s, transform .2s;
+  }
+  .consultation-submit:hover:not(:disabled) .consultation-submit-icon{
+    background:#E7B968;
+    color:var(--deep);
+    transform:translateX(2px);
+  }
+  .consultation-fine{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:34px;
+    margin:0;
+    padding:7px 14px;
+    border:1px solid rgba(1,47,37,.1);
+    border-radius:999px;
+    background:rgba(255,255,255,.58);
+    color:rgba(1,47,37,.58);
+    font-size:12px;
+    font-weight:600;
+    text-align:right;
+    white-space:nowrap;
+  }
+  @media (max-width:520px){
+    .consultation-free-badge{
+      right:18px;
+      width:clamp(86px, 30vw, 112px);
+    }
+    .consultation-actions{
+      align-items:stretch;
+      flex-direction:column;
+    }
+    .consultation-submit,
+    .consultation-fine{
+      width:100%;
+    }
+    .consultation-fine{
+      text-align:center;
+    }
+  }
+
+  @media (max-width:860px){
+    .consultation-card{
+      grid-template-columns:1fr;
+    }
+    .consultation-info{
+      border-radius:28px 28px 0 0;
+      padding:36px 28px;
+    }
+    .consultation-form{
+      border-radius:0 0 28px 28px;
+      padding:36px 28px;
+    }
+  }
   /* ============ SIDEBAR (off-canvas, floats with margin, leftâ†’right slide) ============ */
   .sidebar-overlay{
     position:fixed;inset:0;
@@ -567,15 +853,18 @@
   }
   @media (max-width: 1440px){
     .hero-content{padding-left:36px;padding-right:36px;}
+    .consultation-section{padding-left:58px;padding-right:58px;}
   }
   @media (max-width: 980px){
+    .consultation-section{padding-left:44px;padding-right:44px;}
     .topbar-inner{padding-left:44px;padding-right:44px;}
     .header-inner{padding:9px 22px;}
     .header-actions .btn-book{display:none;}
     .hero-content{padding:130px 22px 50px;}
   }
   @media (max-width: 620px){
-    .page-wrap{padding:0 14px 14px;}
+    .consultation-section{padding-left:14px;padding-right:14px;}
+    .page-wrap{padding:0 14px 0;}
     .hero{border-radius:20px;}
     .site-footer{
       border-radius:20px;
