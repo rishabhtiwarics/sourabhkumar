@@ -369,3 +369,9 @@
     padding-right: 12px;
   }
 }
+
+@media (max-width: 768px) {
+  .srs-card-container {
+    border-radius: 0;
+  }
+}
