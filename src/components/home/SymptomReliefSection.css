@@ -292,3 +292,27 @@
     font-size: 14.5px;
   }
 }
+
+@media (min-width: 1281px) {
+  .srs-card-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 981px) {
+  .srs-card-container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 769px) {
+  .srs-card-container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}

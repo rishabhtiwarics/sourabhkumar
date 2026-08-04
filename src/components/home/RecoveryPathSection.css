@@ -218,3 +218,31 @@
   .rp-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .rp-head { margin-bottom: 48px; }
 }
+
+@media (min-width: 1281px) {
+  .rp-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .rp-inner {
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 981px) {
+  .rp-section {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 769px) {
+  .rp-section {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
