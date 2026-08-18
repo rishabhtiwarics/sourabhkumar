@@ -5,7 +5,6 @@ export default function Sidebar({ isOpen, onClose }) {
     ["#home", "Home"],
     ["#about", "About"],
     ["#services", "Service"],
-    ["#plans", "Health Plans"],
     ["#contact", "Contact"]
   ];
 
