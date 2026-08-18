@@ -1,0 +1,123 @@
+.service-availability-section {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 56px 22px;
+}
+
+.service-availability-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-availability-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.service-availability-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.service-availability-statement {
+  color: var(--deep);
+  font-size: clamp(26px, 2.8vw, 38px);
+  font-weight: 600;
+  line-height: 1.28;
+  margin: 0 auto 24px;
+}
+
+.service-availability-line,
+.service-availability-typing-line {
+  display: block;
+}
+
+.service-availability-typing-line {
+  min-height: 1.35em;
+  margin-top: 4px;
+}
+
+.service-availability-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  vertical-align: middle;
+  background: var(--mist-dim);
+  color: var(--teal);
+  padding: 6px 18px 6px 10px;
+  border-radius: 999px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.52em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+.service-availability-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.typing-text {
+  color: var(--teal);
+  display: inline-block;
+  min-width: min(100%, 15ch);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 4px;
+  background: var(--gold);
+  vertical-align: -0.08em;
+  opacity: 0;
+}
+
+.typing-cursor.visible {
+  opacity: 1;
+  animation: serviceAvailabilityBlink 0.8s steps(2, start) infinite;
+}
+
+.service-availability-action {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes serviceAvailabilityBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .service-availability-section {
+    padding: 48px 16px;
+  }
+
+  .service-availability-statement {
+    font-size: 27px;
+  }
+
+  .service-availability-chip {
+    padding-right: 14px;
+  }
+}
