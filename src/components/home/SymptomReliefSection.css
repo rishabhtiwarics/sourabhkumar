@@ -210,7 +210,7 @@
 
 .srs-pain-card:hover .srs-card-desc,
 .srs-gallery:not(:hover) .srs-pain-card.srs-default-active .srs-card-desc {
-  max-height: 140px;
+  max-height: 230px;
   opacity: 1;
 }
 
