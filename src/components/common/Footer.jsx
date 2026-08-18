@@ -3,7 +3,7 @@ import MarqueeBanner from "./MarqueeBanner.jsx";
 
 const contactItems = [
   { icon: <LocationIcon size={15} />, text: "Delhi NCR" },
-  { icon: <MailIcon size={15} />, text: "hello@moveohealth.in", href: "mailto:hello@moveohealth.in" },
+  { icon: <MailIcon size={15} />, text: "Moveohealth@outlook.con", href: "mailto:Moveohealth@outlook.con" },
   { icon: <PhoneIcon size={15} />, text: "+91 70070 66934", href: "tel:+917007066934" }
 ];
 

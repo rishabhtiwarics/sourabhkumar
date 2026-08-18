@@ -453,7 +453,8 @@
     color:var(--deep);
     margin-bottom:7px;
   }
-  .consultation-field input{
+  .consultation-field input,
+  .consultation-field textarea{
     width:100%;
     font-family:inherit;
     font-size:15px;
@@ -465,20 +466,35 @@
     outline:none;
     transition:border-color .2s, box-shadow .2s;
   }
-  .consultation-field input::placeholder{
+  .consultation-field input::placeholder,
+  .consultation-field textarea::placeholder{
     color:rgba(1,47,37,.38);
   }
-  .consultation-field input:focus{
+  .consultation-field input:focus,
+  .consultation-field textarea:focus{
     border-color:var(--teal-soft);
     box-shadow:0 0 0 4px rgba(3,93,78,.1);
   }
+  .consultation-field textarea{
+    min-height:92px;
+    resize:vertical;
+    border-radius:18px;
+    line-height:1.45;
+  }
   .consultation-tel-wrap{
     display:flex;
+    align-items:center;
     gap:8px;
+    width:100%;
+  }
+  .consultation-tel-wrap input{
+    flex:1 1 auto;
+    min-width:0;
   }
   .consultation-tel-code{
     flex-shrink:0;
     width:64px;
+    min-height:48px;
     display:flex;
     align-items:center;
     justify-content:center;

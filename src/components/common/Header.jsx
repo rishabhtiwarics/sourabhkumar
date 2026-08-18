@@ -52,9 +52,9 @@ function TopBar() {
             <LocationIcon />
             Delhi NCR
           </span>
-          <a href="mailto:hello@moveohealth.in" className="topbar-item">
+          <a href="mailto:Moveohealth@outlook.con" className="topbar-item">
             <MailIcon />
-            hello@moveohealth.in
+            Moveohealth@outlook.con
           </a>
         </div>
       </div>

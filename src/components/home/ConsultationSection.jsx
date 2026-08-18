@@ -65,12 +65,12 @@ export default function ConsultationSection() {
         <div className="consultation-info" ref={infoRef}>
           <span className="consultation-eyebrow">Free Consultation</span>
           <h2>
-            We'll call you back
+            Free guidance for
             <br />
-            within the hour
+            your recovery
           </h2>
           <p>
-            Leave your name and number. We'll call to understand your problem and guide the next step. No commitment, no payment.
+            We offer a free consultation. We respond within 2 hours* of a request. If contacted during working hours: 9:00 AM - 5:30 PM.
           </p>
 
           <div className="consultation-points">
@@ -98,6 +98,11 @@ export default function ConsultationSection() {
               <span className="consultation-tel-code">+91</span>
               <input id="consultation-phone" name="phone" type="tel" placeholder="98765 43210" required />
             </div>
+          </div>
+
+          <div className="consultation-field">
+            <label htmlFor="consultation-issue">Issue *</label>
+            <textarea id="consultation-issue" name="issue" placeholder="Tell us about your pain, injury, or recovery need" rows="3" required />
           </div>
 
           <div className="consultation-actions">
