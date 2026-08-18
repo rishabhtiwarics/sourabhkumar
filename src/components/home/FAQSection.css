@@ -1,11 +1,13 @@
 .faq-section {
   background: #fff;
-  padding: 0 22px;
+  padding: 0 22px 54px;
 }
 
 .faq-inner {
-  max-width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-head {
@@ -181,9 +183,28 @@
   }
 }
 
+
+@media (max-width: 1440px) and (min-width: 981px) {
+  .faq-inner {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 769px) {
+  .faq-inner {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
 @media (max-width: 768px) {
+  .faq-inner {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .faq-section {
-    padding: 0 16px;
+    padding: 0 16px 44px;
   }
 
   .faq-head {

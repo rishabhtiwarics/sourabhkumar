@@ -1,0 +1,329 @@
+.hiring-strip-section {
+  background: #fff;
+  padding: 0 22px;
+}
+
+.hiring-strip-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 26px 30px;
+  border-radius: 22px;
+  background: linear-gradient(155deg, var(--teal) 0%, var(--deep) 100%);
+  overflow: visible;
+}
+
+.hiring-strip-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.hiring-strip-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hiring-strip-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.hiring-strip-head h2 {
+  color: var(--mist);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  line-height: 1.22;
+  margin: 0 0 8px;
+}
+
+.hiring-strip-head p {
+  max-width: 360px;
+  color: rgba(244, 241, 233, 0.72);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hiring-strip-badge {
+  flex-shrink: 0;
+  color: var(--deep);
+  background: var(--gold);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hiring-strip-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.hiring-strip-field {
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+.hiring-strip-field-small {
+  flex-basis: 118px;
+}
+
+.hiring-strip-field input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  outline: none;
+  background: var(--mist-dim);
+  color: var(--deep);
+  font-family: inherit;
+  font-size: 13.5px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hiring-strip-field input::placeholder {
+  color: rgba(1, 47, 37, 0.42);
+}
+
+.hiring-strip-field input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 1.5px var(--teal-soft);
+}
+
+.hiring-strip-select-field {
+  position: relative;
+  z-index: 6;
+}
+
+.hiring-strip-select {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 12px 10px 14px;
+  outline: none;
+  background: var(--mist-dim);
+  color: rgba(1, 47, 37, 0.56);
+  font-family: inherit;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.hiring-strip-select.selected {
+  color: var(--deep);
+}
+
+.hiring-strip-select.open,
+.hiring-strip-select:focus-visible {
+  background: #fff;
+  box-shadow: 0 0 0 1.5px var(--teal-soft);
+}
+
+.hiring-strip-select svg {
+  flex-shrink: 0;
+  transform: rotate(90deg);
+  transition: transform 0.22s ease;
+}
+
+.hiring-strip-select.open svg {
+  transform: rotate(-90deg);
+}
+
+.hiring-strip-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 8px;
+  border: 1px solid rgba(1, 47, 37, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 18px 34px rgba(1, 47, 37, 0.16);
+  animation: hiringStripDropdownIn 0.18s ease forwards;
+}
+
+.hiring-strip-option {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--deep);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.hiring-strip-option:hover,
+.hiring-strip-option.active {
+  background: var(--mist-dim);
+  color: var(--teal);
+  transform: translateX(2px);
+}
+
+.hiring-strip-file-btn {
+  flex: 0 0 auto;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--mist-dim);
+  color: var(--deep);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hiring-strip-file-btn:hover {
+  background: rgba(217, 164, 85, 0.24);
+}
+
+.hiring-strip-file-btn input {
+  display: none;
+}
+
+.hiring-strip-submit {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--deep);
+  color: var(--mist);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.hiring-strip-submit:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--deep);
+  transform: translateY(-1px);
+}
+
+.hiring-strip-submit:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+@keyframes hiringStripDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1180px) {
+  .hiring-strip-shell {
+    padding: 24px;
+  }
+
+  .hiring-strip-field {
+    flex-basis: 180px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hiring-strip-section {
+    padding: 0 18px;
+  }
+
+  .hiring-strip-form {
+    border-radius: 24px;
+  }
+
+  .hiring-strip-field,
+  .hiring-strip-field-small,
+  .hiring-strip-file-btn {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .hiring-strip-submit {
+    flex: 1 1 100%;
+    width: 100%;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiring-strip-section {
+    padding: 0 14px;
+  }
+
+  .hiring-strip-shell {
+    border-radius: 20px;
+    padding: 22px 18px;
+  }
+
+  .hiring-strip-head {
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .hiring-strip-field,
+  .hiring-strip-field-small,
+  .hiring-strip-file-btn,
+  .hiring-strip-submit {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .hiring-strip-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hiring-strip-shell {
+    border-radius: 0;
+    padding: 22px 14px;
+  }
+
+  .hiring-strip-badge {
+    width: 100%;
+    text-align: center;
+  }
+}
