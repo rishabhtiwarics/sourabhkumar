@@ -41,7 +41,7 @@ export default function FloatingContactWidget() {
           <div className="contact-popup-header">
             <div className="contact-popup-badge">
               <span className="dot-pulse" />
-              CONTACT MOVEO KUMAR
+              CONTACT Moveo Health
             </div>
             <button
               className="popup-close-btn"
@@ -52,7 +52,7 @@ export default function FloatingContactWidget() {
             </button>
           </div>
 
-          <div className="contact-popup-timing">Everyday: 08:00 - 20:00</div>
+          <div className="contact-popup-timing">Working Hours: 9:00 AM - 5:30 PM</div>
 
           <div className="contact-popup-body">
             {/* Call Now Box */}
@@ -83,16 +83,8 @@ export default function FloatingContactWidget() {
               <div className="popup-info-text">
                 <span className="popup-label">Visit our clinic</span>
                 <p className="popup-value address-text">
-                  506, Tower 4, Ace Divino, Greater Noida West, Uttar Pradesh, India
+                  Delhi NCR
                 </p>
-                <a
-                  href="https://maps.google.com/?q=Ace+Divino+Greater+Noida+West"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="open-maps-link"
-                >
-                  Open in Maps &rarr;
-                </a>
               </div>
             </div>
           </div>
