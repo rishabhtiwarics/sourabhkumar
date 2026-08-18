@@ -35,7 +35,7 @@ const ShieldIcon = () => (
 const ITEMS = [
   { icon: <HeartPulseIcon />, text: <>Move Better, <span className="mqb-gold">Live Better</span></> },
   { icon: <StarIcon />,       text: "Your Health Is Our Mission" },
-  { icon: <RunIcon />,        text: <>Move Better with <span className="mqb-gold">Sourabh Kumar</span></> },
+  { icon: <RunIcon />,        text: <>Move Better with <span className="mqb-gold">Moveo Health</span></> },
   { icon: <ShieldIcon />,     text: "Certified Home Physiotherapy" },
   { icon: <HeartPulseIcon />, text: <>Heal Stronger, <span className="mqb-gold">Live Freely</span></> },
   { icon: <StarIcon />,       text: "500+ Five-Star Patient Reviews" },

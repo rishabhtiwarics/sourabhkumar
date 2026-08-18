@@ -312,14 +312,14 @@ export default function HeroSection() {
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="hero-copy">
-            <span className="eyebrow">Physiotherapy & Rehab Clinic</span>
+            <span className="eyebrow">Physiotherapy & Moveo Health</span>
             <h1>
               Rebuild Movement,
               <br />
               Recover <span className="accent">Without Limits</span>
             </h1>
             <p>
-              PhysioG pairs licensed physiotherapists with tailored recovery plans - from sports injuries to post-surgical rehab - so you get back to your life, not just your feet.
+              Moveo Health pairs licensed physiotherapists with tailored recovery plans - from sports injuries to post-surgical rehab - so you get back to your life, not just your feet.
             </p>
 
             <div className="hero-cta">
@@ -329,14 +329,14 @@ export default function HeroSection() {
                 </span>
                 <span className="label">Book Consultation</span>
               </a>
-              <a href="tel:+911800120555" className="btn-ghost">
+              <a href="tel:+917007066934" className="btn-ghost">
                 <span className="icon-circle">
                   <PhoneIcon size={16} stroke="#F4F1E9" />
                 </span>
                 <span className="call-now-text">
                   Call Now
                   <br />
-                  +91 1800 120 555
+                  +91 70070 66934
                 </span>
               </a>
             </div>

@@ -26,7 +26,7 @@ export default function FloatingContactWidget() {
   }, []);
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText("+91 7691907845");
+    navigator.clipboard.writeText("+91 70070 66934");
     setCopiedPhone(true);
     setTimeout(() => setCopiedPhone(false), 2000);
   };
@@ -41,7 +41,7 @@ export default function FloatingContactWidget() {
           <div className="contact-popup-header">
             <div className="contact-popup-badge">
               <span className="dot-pulse" />
-              CONTACT SOURABH KUMAR
+              CONTACT MOVEO KUMAR
             </div>
             <button
               className="popup-close-btn"
@@ -57,13 +57,13 @@ export default function FloatingContactWidget() {
           <div className="contact-popup-body">
             {/* Call Now Box */}
             <div className="popup-info-box">
-              <a href="tel:+917691907845" className="popup-icon-btn phone-btn">
+              <a href="tel:+917007066934" className="popup-icon-btn phone-btn">
                 <PhoneIcon size={20} stroke="#FFFFFF" />
               </a>
               <div className="popup-info-text">
                 <span className="popup-label">Call now</span>
-                <a href="tel:+917691907845" className="popup-value">
-                  +91 76919 07845
+                <a href="tel:+917007066934" className="popup-value">
+                  +91 70070 66934
                 </a>
               </div>
               <button
@@ -105,7 +105,7 @@ export default function FloatingContactWidget() {
         <div className="floating-btn-wrapper">
           <span className="floating-btn-label whatsapp-label">Chat on WhatsApp</span>
           <a
-            href="https://wa.me/917691907845?text=Hello%20Sourabh,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            href="https://wa.me/917007066934?text=Hello%20Moveo%20Health,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="floating-btn whatsapp-btn"

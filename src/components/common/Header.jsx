@@ -8,7 +8,7 @@ function Logo() {
       <span className="mark">
         <HeartIcon />
       </span>
-      Sourabh Kumar
+      Moveo Health
     </a>
   );
 }
@@ -16,7 +16,7 @@ function Logo() {
 function TopBar() {
   const messages = useMemo(
     () => [
-      { icon: <PhoneIcon />, text: "Call Now: +91 76919 07845" },
+      { icon: <PhoneIcon />, text: "Call Now: +91 70070 66934" },
       { icon: <CalendarIcon stroke="currentColor" />, text: "Free First Consultation This Week" },
       { icon: <ClockIcon />, text: "Same-Day Appointments Available" },
       { icon: <StarIcon />, text: "500+ Five-Star Patient Reviews" }
@@ -50,11 +50,11 @@ function TopBar() {
         <div className="topbar-right">
           <span className="topbar-item">
             <LocationIcon />
-            Sector 21, Gurugram, IN
+            Delhi NCR
           </span>
-          <a href="mailto:sourabh@physiog.in" className="topbar-item">
+          <a href="mailto:hello@moveohealth.in" className="topbar-item">
             <MailIcon />
-            sourabh@physiog.in
+            hello@moveohealth.in
           </a>
         </div>
       </div>

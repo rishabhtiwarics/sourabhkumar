@@ -1,17 +1,15 @@
-import { FacebookIcon, HeartIcon, InstagramIcon, LinkedInIcon, LocationIcon, MailIcon, PhoneIcon, YouTubeIcon } from "./Icons.jsx";
+import { FacebookIcon, HeartIcon, InstagramIcon, LocationIcon, MailIcon, PhoneIcon } from "./Icons.jsx";
 import MarqueeBanner from "./MarqueeBanner.jsx";
 
 const contactItems = [
-  { icon: <LocationIcon size={15} />, text: "Sector 21, Gurugram, Delhi NCR" },
-  { icon: <MailIcon size={15} />, text: "hello@physiog.in", href: "mailto:hello@physiog.in" },
-  { icon: <PhoneIcon size={15} />, text: "+91 76919 07845", href: "tel:+917691907845" }
+  { icon: <LocationIcon size={15} />, text: "Delhi NCR" },
+  { icon: <MailIcon size={15} />, text: "hello@moveohealth.in", href: "mailto:hello@moveohealth.in" },
+  { icon: <PhoneIcon size={15} />, text: "+91 70070 66934", href: "tel:+917007066934" }
 ];
 
 const socialLinks = [
   { label: "Instagram", icon: <InstagramIcon size={15} />, href: "#" },
   { label: "Facebook",  icon: <FacebookIcon  size={15} />, href: "#" },
-  { label: "LinkedIn",  icon: <LinkedInIcon  size={15} />, href: "#" },
-  { label: "YouTube",   icon: <YouTubeIcon   size={15} />, href: "#" },
 ];
 
 export default function Footer() {
@@ -24,7 +22,7 @@ export default function Footer() {
           <span className="mark">
             <HeartIcon size={16} />
           </span>
-          Sourabh Kumar
+          Moveo Health
         </a>
 
         <p className="footer-about">
@@ -62,12 +60,12 @@ export default function Footer() {
 
 
         {/* Watermark vertical on left side */}
-        <div className="footer-watermark-vertical">SOURABH</div>
+        <div className="footer-watermark-vertical">MOVEO</div>
       </footer>
 
       {/* Copyright below the footer card */}
       <div className="footer-copybar">
-        <span>&copy; 2026 Sourabh Kumar. All rights reserved.</span>
+        <span>&copy; 2026 Moveo Health. All rights reserved.</span>
       </div>
     </div>
   );
