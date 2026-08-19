@@ -996,6 +996,7 @@
     .hero-copy{max-width:100%;margin:0 auto;}
     .hero-copy p{margin-left:auto;margin-right:auto;}
     .eyebrow{justify-content:center;}
+    .hero-brand-meta{display:none;}
     .hero-cta{
       justify-content:center;
       flex-wrap:nowrap;

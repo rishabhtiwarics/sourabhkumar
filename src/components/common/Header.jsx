@@ -1,35 +1,38 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { CalendarIcon, ClockIcon, HeartIcon, LocationIcon, MailIcon, MenuIcon, PhoneIcon, StarIcon } from "./Icons.jsx";
 
+/* ── Logo: always goes to home root ─────────────────────────── */
 function Logo() {
   return (
-    <a href="#home" className="logo">
+    <Link to="/" className="logo">
       <span className="mark">
         <HeartIcon />
       </span>
       MoveO Health
-    </a>
+    </Link>
   );
 }
 
+/* ── Top bar rotating messages + contact ────────────────────── */
 function TopBar() {
   const messages = useMemo(
     () => [
-      { icon: <PhoneIcon />, text: "Call Now: +91 70070 66934" },
-      { icon: <CalendarIcon stroke="currentColor" />, text: "Free First Consultation This Week" },
-      { icon: <ClockIcon />, text: "Same-Day Appointments Available" },
-      { icon: <StarIcon />, text: "500+ Five-Star Patient Reviews" }
+      { icon: <PhoneIcon />,                              text: "Call Now: +91 70070 66934" },
+      { icon: <CalendarIcon stroke="currentColor" />,     text: "Free First Consultation This Week" },
+      { icon: <ClockIcon />,                              text: "Same-Day Appointments Available" },
+      { icon: <StarIcon />,                               text: "500+ Five-Star Patient Reviews" },
     ],
     []
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % messages.length);
+    const id = window.setInterval(() => {
+      setActiveIndex((i) => (i + 1) % messages.length);
     }, 3200);
-    return () => window.clearInterval(intervalId);
+    return () => window.clearInterval(id);
   }, [messages.length]);
 
   return (
@@ -38,10 +41,10 @@ function TopBar() {
         <div className="topbar-left">
           <span className="topbar-item">
             <span className="rotator" id="topRotator">
-              {messages.map((message, index) => (
-                <span key={message.text} className={`rotator-item ${index === activeIndex ? "active" : ""}`}>
-                  {message.icon}
-                  <span>{message.text}</span>
+              {messages.map((msg, idx) => (
+                <span key={msg.text} className={`rotator-item ${idx === activeIndex ? "active" : ""}`}>
+                  {msg.icon}
+                  <span>{msg.text}</span>
                 </span>
               ))}
             </span>
@@ -64,6 +67,11 @@ function TopBar() {
 
 export default function Header({ onMenuClick }) {
   const headerRef = useRef(null);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  /* "Book Consultation" scrolls to #book on home, navigates to /#book otherwise */
+  const bookHref = isHome ? "#book" : "/#book";
 
   useEffect(() => {
     const syncTopbarHeight = () => {
@@ -93,7 +101,7 @@ export default function Header({ onMenuClick }) {
           top: "16px",
           duration: 0.85,
           ease: "power2.inOut",
-          overwrite: "auto"
+          overwrite: "auto",
         });
       } else if (scrollY <= 35 && isShrunk) {
         isShrunk = false;
@@ -104,7 +112,7 @@ export default function Header({ onMenuClick }) {
           top: `${topbarH}px`,
           duration: 0.85,
           ease: "power2.inOut",
-          overwrite: "auto"
+          overwrite: "auto",
         });
       }
     };
@@ -124,7 +132,7 @@ export default function Header({ onMenuClick }) {
         <div className="header-inner">
           <Logo />
           <div className="header-actions">
-            <a href="#book" className="btn-book">
+            <a href={bookHref} className="btn-book">
               <span className="icon-circle">
                 <CalendarIcon />
               </span>
@@ -139,4 +147,3 @@ export default function Header({ onMenuClick }) {
     </>
   );
 }
-
