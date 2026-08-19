@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { CalendarIcon } from "../common/Icons.jsx";
-import "./ServiceAvailabilitySection.css";
 
 const typingPhrases = [
   "book your call today.",

@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "./ScrollProgressIndicator.css";
 
 export default function ScrollProgressIndicator() {
   const thumbRef = useRef(null);

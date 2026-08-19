@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as THREE from "three";
-import "./SymptomReliefSection.css";
 
 gsap.registerPlugin(ScrollTrigger);
 

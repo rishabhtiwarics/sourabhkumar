@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { CheckIcon, CloseIcon, CopyIcon, LocationIcon, PhoneIcon, WhatsAppIcon } from "./Icons.jsx";
-import "./FloatingContactWidget.css";
 
 export default function FloatingContactWidget() {
   const [isVisible, setIsVisible] = useState(false);

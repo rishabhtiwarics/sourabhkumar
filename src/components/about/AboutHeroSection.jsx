@@ -1,13 +1,6 @@
 import { CalendarIcon, PhoneIcon } from "../common/Icons.jsx";
 
-/**
- * AboutHeroSection
- * Reuses all existing hero CSS classes from App.css — zero duplicate styles.
- * .page-wrap  → inset card spacing
- * .hero       → dark bg image + gradient + rounded corners
- * .hero-content, .hero-copy, .eyebrow, .hero-cta, .btn-book, .btn-ghost
- *             → exact same layout & buttons as home hero
- */
+
 export default function AboutHeroSection() {
   return (
     <div className="page-wrap">

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ArrowIcon } from "../common/Icons.jsx";
-import "./FAQSection.css";
 
 const faqs = [
   {
