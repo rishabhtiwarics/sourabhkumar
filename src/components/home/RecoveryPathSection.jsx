@@ -41,27 +41,27 @@ const CertIcon = () => (
 const STEPS = [
   {
     num: "01",
+    icon: <TargetIcon />,
+    title: "Personalized Plan",
+    desc: "Designed around your condition, lifestyle, and recovery goals.",
+  },
+  {
+    num: "02",
+    icon: <CertIcon />,
+    title: "Certified Therapists",
+    desc: "Trusted, licensed experts guiding every stage of rehabilitation.",
+  },
+  {
+    num: "03",
     icon: <HomeIcon />,
     title: "Home Physiotherapy",
     desc: "Convenient treatment and comfortable recovery, right at your home.",
   },
   {
-    num: "02",
-    icon: <TargetIcon />,
-    title: "Personalized Treatment",
-    desc: "Designed around your condition, lifestyle, and recovery goals.",
-  },
-  {
-    num: "03",
+    num: "04",
     icon: <HeartIcon />,
     title: "Comfortable Recovery",
     desc: "Evidence-based care that supports faster, stress-free healing.",
-  },
-  {
-    num: "04",
-    icon: <CertIcon />,
-    title: "Certified Therapists",
-    desc: "Trusted, licensed experts guiding every stage of rehabilitation.",
   },
 ];
 

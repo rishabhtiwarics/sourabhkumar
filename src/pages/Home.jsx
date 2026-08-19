@@ -7,7 +7,6 @@ import TrustPillarsSection from "../components/home/TrustPillarsSection.jsx";
 import ConsultationSection from "../components/home/ConsultationSection.jsx";
 import ServiceAvailabilitySection from "../components/home/ServiceAvailabilitySection.jsx";
 import FAQSection from "../components/home/FAQSection.jsx";
-import HiringStripSection from "../components/home/HiringStripSection.jsx";
 import RecoveryPathSection from "../components/home/RecoveryPathSection.jsx";
 import SymptomReliefSection from "../components/home/SymptomReliefSection.jsx";
 
@@ -40,7 +39,6 @@ export default function Home() {
       <ServiceAvailabilitySection />
       <FAQSection />
 
-      <HiringStripSection />
       <Footer />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </>

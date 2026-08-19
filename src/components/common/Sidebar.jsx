@@ -4,7 +4,7 @@ export default function Sidebar({ isOpen, onClose }) {
   const links = [
     ["#home", "Home"],
     ["#about", "About"],
-    ["#services", "Service"],
+    ["#services", "Services"],
     ["#contact", "Contact"]
   ];
 
@@ -17,7 +17,7 @@ export default function Sidebar({ isOpen, onClose }) {
             <span className="mark">
               <HeartIcon size={16} />
             </span>
-            <span className="sidebar-logo-text">Moveo Health</span>
+            <span className="sidebar-logo-text">MoveO Health</span>
           </div>
           <button className="close-btn" type="button" aria-label="Close menu" onClick={onClose}>
             <CloseIcon />

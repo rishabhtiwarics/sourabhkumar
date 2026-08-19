@@ -3,7 +3,7 @@ import MarqueeBanner from "./MarqueeBanner.jsx";
 
 const contactItems = [
   { icon: <LocationIcon size={15} />, text: "Delhi NCR" },
-  { icon: <MailIcon size={15} />, text: "Moveohealth@outlook.con", href: "mailto:Moveohealth@outlook.con" },
+  { icon: <MailIcon size={15} />, text: "moveohealth@outlook.com", href: "mailto:moveohealth@outlook.com" },
   { icon: <PhoneIcon size={15} />, text: "+91 70070 66934", href: "tel:+917007066934" }
 ];
 
@@ -22,7 +22,7 @@ export default function Footer() {
           <span className="mark">
             <HeartIcon size={16} />
           </span>
-          Moveo Health
+          MoveO Health
         </a>
 
         <p className="footer-about">
@@ -65,7 +65,7 @@ export default function Footer() {
 
       {/* Copyright below the footer card */}
       <div className="footer-copybar">
-        <span>&copy; 2026 Moveo Health. All rights reserved.</span>
+        <span>&copy; 2026 MoveO Health. All rights reserved.</span>
       </div>
     </div>
   );

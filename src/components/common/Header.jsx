@@ -8,7 +8,7 @@ function Logo() {
       <span className="mark">
         <HeartIcon />
       </span>
-      Moveo Health
+      MoveO Health
     </a>
   );
 }
@@ -52,9 +52,9 @@ function TopBar() {
             <LocationIcon />
             Delhi NCR
           </span>
-          <a href="mailto:Moveohealth@outlook.con" className="topbar-item">
+          <a href="mailto:moveohealth@outlook.com" className="topbar-item">
             <MailIcon />
-            Moveohealth@outlook.con
+            moveohealth@outlook.com
           </a>
         </div>
       </div>

@@ -312,14 +312,18 @@ export default function HeroSection() {
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="hero-copy">
-            <span className="eyebrow">Physiotherapy & Moveo Health</span>
+            <span className="eyebrow">Physiotherapy Home Care</span>
+            <div className="hero-brand-meta">
+              <span className="positioning-words">Recalibrate &bull; Strengthen &bull; Sharpen</span>
+              <span className="service-scope">Physiotherapy & Chiropractors</span>
+            </div>
             <h1>
-              Rebuild Movement,
+              MOVE BETTER. RECOVER FASTER.
               <br />
-              Recover <span className="accent">Without Limits</span>
+              <span className="accent">LIVE FULLY.</span>
             </h1>
             <p>
-              Moveo Health pairs licensed physiotherapists with tailored recovery plans - from sports injuries to post-surgical rehab - so you get back to your life, not just your feet.
+              With therapy of your choice, at your home, with our qualified therapists — so you can get back to your life, not just your feet.
             </p>
 
             <div className="hero-cta">
