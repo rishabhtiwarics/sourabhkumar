@@ -3,7 +3,7 @@ import { FacebookIcon, HeartIcon, InstagramIcon, LocationIcon, MailIcon, PhoneIc
 import MarqueeBanner from "./MarqueeBanner.jsx";
 
 const contactItems = [
-  { icon: <LocationIcon size={15} />, text: "Delhi NCR" },
+  { icon: <LocationIcon size={15} />, text: "Available in: Delhi NCR, Gurugram" },
   { icon: <MailIcon size={15} />,     text: "moveohealth@outlook.com", href: "mailto:moveohealth@outlook.com" },
   { icon: <PhoneIcon size={15} />,    text: "+91 70070 66934",         href: "tel:+917007066934" },
 ];
@@ -13,10 +13,7 @@ const socialLinks = [
   { label: "Facebook",  icon: <FacebookIcon  size={15} />, href: "https://facebook.com"  },
 ];
 
-
-
 export default function Footer() {
-
   return (
     <div className="page-wrap footer-wrap">
       <MarqueeBanner />
@@ -31,7 +28,7 @@ export default function Footer() {
         </Link>
 
         <p className="footer-about">
-          Personalized physiotherapy, sports rehab, and recovery care designed to help you move better, heal stronger, and return to daily life with confidence.
+          Personalised help at your home — from physiotherapy to chiropractic. Quality therapy by experienced therapists to help you move better, heal faster, and return to daily life with confidence.
         </p>
 
         {/* Contact row */}
@@ -68,9 +65,17 @@ export default function Footer() {
         <div className="footer-watermark-vertical">MOVEO</div>
       </footer>
 
-      {/* Copyright */}
+      {/* Copyright & CTA bottom bar */}
       <div className="footer-copybar">
-        <span>&copy; 2026 MoveO Health. All rights reserved.</span>
+        <div className="footer-copybar-left">
+          <span>Ready to move better?</span>
+          <a href="/#book" className="footer-cta-link">
+            Book a free consultation &rarr;
+          </a>
+        </div>
+        <div className="footer-copybar-right">
+          <span>&copy; 2026 MoveO Health. All rights reserved.</span>
+        </div>
       </div>
     </div>
   );
