@@ -9,8 +9,8 @@ export default function Sidebar({ isOpen, onClose }) {
   const links = [
     { label: "Home",     to: "/",       type: "route" },
     { label: "About",    to: "/about",  type: "route" },
-    { label: "Services", to: isHome ? "#services" : "/#services", type: "hash" },
-    { label: "Contact",  to: isHome ? "#contact"  : "/#contact",  type: "hash" },
+    { label: "Services", to: "/services", type: "route" },
+    { label: "Contact",  to: "/contact",  type: "route" },
   ];
 
   return (
@@ -59,3 +59,4 @@ export default function Sidebar({ isOpen, onClose }) {
     </>
   );
 }
+

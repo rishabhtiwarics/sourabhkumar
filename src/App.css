@@ -1914,7 +1914,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 /* ================================================================
    FAQ SECTION
    ================================================================ */
-.faq-section { background: #fff; padding: 0 22px 54px; }
+.faq-section { background: #fff; padding: 70px 22px 0; }
 .faq-inner { width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto; }
 .faq-head { max-width: 680px; margin: 0 auto 38px; text-align: center; }
 .faq-eyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 10px; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
@@ -1938,7 +1938,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 @keyframes faqBgSpin { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 @media (max-width: 1440px) and (min-width: 981px) { .faq-inner { padding-left: 36px; padding-right: 36px; } }
 @media (max-width: 980px) and (min-width: 769px) { .faq-inner { padding-left: 22px; padding-right: 22px; } }
-@media (max-width: 768px) { .faq-inner { padding-left: 12px; padding-right: 12px; } .faq-section { padding: 0 16px 44px; } .faq-head { margin-bottom: 30px; } .faq-grid { grid-template-columns: 1fr; } .faq-item.full { grid-column: auto; } }
+@media (max-width: 768px) { .faq-inner { padding-left: 12px; padding-right: 12px; } .faq-section { padding: 52px 16px 0; } .faq-head { margin-bottom: 30px; } .faq-grid { grid-template-columns: 1fr; } .faq-item.full { grid-column: auto; } }
 @media (max-width: 520px) { .faq-question { padding: 16px; gap: 10px; font-size: 13.5px; } .faq-answer { padding-left: 56px; padding-right: 16px; font-size: 12.8px; } }
 
 /* ================================================================
@@ -2345,7 +2345,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 .about-services-section {
   position: relative;
   overflow: hidden;
-  padding: 60px 0 80px;
+  padding: 0 0 56px;
   background: var(--page-bg, #FFFFFF);
 }
 
@@ -2546,7 +2546,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 
 @media (max-width: 860px) {
   .about-services-section {
-    padding: 0 0 50px;
+    padding: 0 0 44px;
   }
   .about-services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2609,19 +2609,19 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 /* ================================================================
    ABOUT PAGE HERO — full semantic selectors (mirrors .hero styles)
    ================================================================ */
-.about-hero {
+.inner-hero {
   position: relative;
   min-height: 52vh;
   border-radius: 28px;
   overflow: hidden;
   background:
     linear-gradient(100deg, rgba(1,47,37,0.80) 0%, rgba(1,47,37,0.48) 42%, rgba(1,47,37,0.20) 100%),
-    var(--hero-bg) center/cover no-repeat;
+    var(--inner-hero-bg, var(--hero-bg)) center/cover no-repeat;
   display: flex;
   flex-direction: column;
 }
 
-.about-hero-content {
+.inner-hero-content {
   position: relative;
   z-index: 2;
   flex: 1;
@@ -2633,11 +2633,11 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   padding: 100px 0 60px;
 }
 
-.about-hero-copy {
+.inner-hero-copy {
   max-width: 640px;
 }
 
-.about-hero-eyebrow {
+.inner-hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2648,7 +2648,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   color: var(--gold);
   margin-bottom: 14px;
 }
-.about-hero-eyebrow::before {
+.inner-hero-eyebrow::before {
   content: "";
   width: 26px;
   height: 2px;
@@ -2656,16 +2656,16 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   display: inline-block;
 }
 
-.about-hero-copy h1 {
+.inner-hero-copy h1 {
   font-size: clamp(26px, 3.4vw, 42px);
   font-weight: 600;
   line-height: 1.15;
   color: var(--mist);
   margin-bottom: 20px;
 }
-.about-hero-copy h1 .accent { color: var(--gold); }
+.inner-hero-copy h1 .accent { color: var(--gold); }
 
-.about-hero-copy p {
+.inner-hero-copy p {
   font-size: 16.5px;
   line-height: 1.7;
   color: rgba(244,241,233,0.82);
@@ -2673,7 +2673,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   margin-bottom: 0;
 }
 
-.about-hero-cta {
+.inner-hero-cta {
   display: flex;
   align-items: center;
   gap: 26px;
@@ -2682,7 +2682,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 /* Book button */
-.about-hero-btn-book {
+.inner-hero-btn-book {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2697,13 +2697,13 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   transition: background .2s, color .2s, border-color .2s, transform .2s;
   white-space: nowrap;
 }
-.about-hero-btn-book:hover {
+.inner-hero-btn-book:hover {
   background: var(--gold);
   color: var(--deep);
   border-color: rgba(1,47,37,0.08);
   transform: translateY(-1px);
 }
-.about-hero-icon-circle {
+.inner-hero-icon-circle {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -2714,12 +2714,12 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   flex-shrink: 0;
   transition: background .2s;
 }
-.about-hero-icon-circle svg { stroke: var(--deep); transition: stroke .2s; }
-.about-hero-btn-book:hover .about-hero-icon-circle { background: var(--deep); }
-.about-hero-btn-book:hover .about-hero-icon-circle svg { stroke: var(--mist); }
+.inner-hero-icon-circle svg { stroke: var(--deep); transition: stroke .2s; }
+.inner-hero-btn-book:hover .inner-hero-icon-circle { background: var(--deep); }
+.inner-hero-btn-book:hover .inner-hero-icon-circle svg { stroke: var(--mist); }
 
 /* Ghost button */
-.about-hero-btn-ghost {
+.inner-hero-btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -2728,36 +2728,36 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   font-weight: 600;
   font-size: 14.5px;
 }
-.about-hero-icon-circle--ghost {
+.inner-hero-icon-circle--ghost {
   width: 44px;
   height: 44px;
   background: rgba(244,241,233,0.12);
   border: 1px solid rgba(244,241,233,0.22);
 }
-.about-hero-btn-ghost:hover .about-hero-icon-circle--ghost { background: var(--gold); }
+.inner-hero-btn-ghost:hover .inner-hero-icon-circle--ghost { background: var(--gold); }
 
 /* ── Breakpoints (mirror exactly) ─────────────────────────────── */
 @media (max-width: 1440px) {
-  .about-hero-content { padding-left: 36px; padding-right: 36px; }
+  .inner-hero-content { padding-left: 36px; padding-right: 36px; }
 }
 
 @media (max-width: 980px) {
-  .about-hero-content { padding: 100px 22px 48px; }
+  .inner-hero-content { padding: 100px 22px 48px; }
 }
 
 @media (max-width: 620px) {
-  .about-hero { border-radius: 20px; }
+  .inner-hero { border-radius: 20px; }
 }
 
 @media (max-width: 768px) {
-  .about-hero {
+  .inner-hero {
     min-height: 55svh;
     border-radius: 0;
     background:
       linear-gradient(180deg, rgba(1,47,37,0.16) 0%, rgba(1,47,37,0.28) 42%, rgba(1,47,37,0.72) 100%),
-      var(--hero-mobile-bg) 58% top/cover no-repeat;
+      var(--inner-hero-mobile-bg, var(--hero-mobile-bg)) 58% top/cover no-repeat;
   }
-  .about-hero::after {
+  .inner-hero::after {
     content: "";
     position: absolute;
     left: 0; right: 0; bottom: 0;
@@ -2766,45 +2766,45 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
     pointer-events: none;
     z-index: 1;
   }
-  .about-hero-content {
+  .inner-hero-content {
     align-items: flex-end;
     justify-content: center;
     text-align: center;
     padding: 90px 12px 32px;
   }
-  .about-hero-copy { max-width: 100%; margin: 0 auto; }
-  .about-hero-copy h1 { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
-  .about-hero-copy p { font-size: 14.5px; line-height: 1.65; margin-left: auto; margin-right: auto; }
-  .about-hero-eyebrow { justify-content: center; font-size: 11px; }
-  .about-hero-cta {
+  .inner-hero-copy { max-width: 100%; margin: 0 auto; }
+  .inner-hero-copy h1 { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
+  .inner-hero-copy p { font-size: 14.5px; line-height: 1.65; margin-left: auto; margin-right: auto; }
+  .inner-hero-eyebrow { justify-content: center; font-size: 11px; }
+  .inner-hero-cta {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 8px;
     width: 100%;
     margin-bottom: 36px;
   }
-  .about-hero-btn-book {
+  .inner-hero-btn-book {
     gap: 7px;
     padding: 6px 10px 6px 6px;
     font-size: 11px;
     line-height: 1;
     min-width: 0;
   }
-  .about-hero-btn-book .about-hero-icon-circle {
+  .inner-hero-btn-book .inner-hero-icon-circle {
     width: 26px;
     height: 26px;
   }
-  .about-hero-btn-ghost {
+  .inner-hero-btn-ghost {
     gap: 7px;
     font-size: 10.5px;
     line-height: 1.15;
     min-width: 0;
   }
-  .about-hero-icon-circle--ghost {
+  .inner-hero-icon-circle--ghost {
     width: 32px;
     height: 32px;
   }
-  .about-hero-btn-book .label,
+  .inner-hero-btn-book .label,
   .call-now-text {
     white-space: nowrap;
   }
