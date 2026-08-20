@@ -89,14 +89,14 @@ export default function ConsultationSection() {
 
           <div className="consultation-field">
             <label htmlFor="consultation-name">Your name *</label>
-            <input id="consultation-name" name="name" type="text" placeholder="e.g. Priya Sharma" required />
+            <input id="consultation-name" name="name" type="text" placeholder="Enter your full name" required />
           </div>
 
           <div className="consultation-field">
             <label htmlFor="consultation-phone">Mobile number *</label>
             <div className="consultation-tel-wrap">
               <span className="consultation-tel-code">+91</span>
-              <input id="consultation-phone" name="phone" type="tel" placeholder="98765 43210" required />
+              <input id="consultation-phone" name="phone" type="tel" placeholder="XXXXX XXXXX" required />
             </div>
           </div>
 

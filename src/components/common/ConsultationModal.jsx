@@ -112,7 +112,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                   id="modal-name"
                   name="name"
                   type="text"
-                  placeholder="e.g. Priya Sharma"
+                  placeholder="Enter your full name"
                   required
                 />
               </div>
@@ -125,7 +125,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                     id="modal-phone"
                     name="phone"
                     type="tel"
-                    placeholder="98765 43210"
+                    placeholder="XXXXX XXXXX"
                     required
                   />
                 </div>

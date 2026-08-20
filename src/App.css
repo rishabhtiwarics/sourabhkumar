@@ -2611,7 +2611,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
    ================================================================ */
 .about-hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 52vh;
   border-radius: 28px;
   overflow: hidden;
   background:
@@ -2630,7 +2630,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
-  padding: 130px 0 80px;
+  padding: 100px 0 60px;
 }
 
 .about-hero-copy {
@@ -2670,7 +2670,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   line-height: 1.7;
   color: rgba(244,241,233,0.82);
   max-width: 500px;
-  margin-bottom: 36px;
+  margin-bottom: 0;
 }
 
 .about-hero-cta {
@@ -2742,7 +2742,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 @media (max-width: 980px) {
-  .about-hero-content { padding: 130px 22px 50px; }
+  .about-hero-content { padding: 100px 22px 48px; }
 }
 
 @media (max-width: 620px) {
@@ -2751,7 +2751,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 100svh;
+    min-height: 55svh;
     border-radius: 0;
     background:
       linear-gradient(180deg, rgba(1,47,37,0.16) 0%, rgba(1,47,37,0.28) 42%, rgba(1,47,37,0.72) 100%),
@@ -2770,11 +2770,12 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
     align-items: flex-end;
     justify-content: center;
     text-align: center;
-    padding: 130px 12px 28px;
+    padding: 90px 12px 32px;
   }
   .about-hero-copy { max-width: 100%; margin: 0 auto; }
-  .about-hero-copy p { margin-left: auto; margin-right: auto; }
-  .about-hero-eyebrow { justify-content: center; }
+  .about-hero-copy h1 { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
+  .about-hero-copy p { font-size: 14.5px; line-height: 1.65; margin-left: auto; margin-right: auto; }
+  .about-hero-eyebrow { justify-content: center; font-size: 11px; }
   .about-hero-cta {
     justify-content: center;
     flex-wrap: nowrap;
