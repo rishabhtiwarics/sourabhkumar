@@ -2337,7 +2337,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 .about-services-section {
   position: relative;
   overflow: hidden;
-  padding: 0 0 80px;
+  padding: 60px 0 80px;
   background: var(--page-bg, #FFFFFF);
 }
 
@@ -2404,6 +2404,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-items: stretch;
+  height: auto;
   margin-bottom: 48px;
 }
 
@@ -2411,6 +2412,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-sizing: border-box;
   background: var(--mist-dim, #EAE6DA);
   border-radius: 22px;
   overflow: hidden;
@@ -2424,7 +2426,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 .about-services-card-image {
-  height: 180px;
+  height: 160px;
   width: 100%;
   overflow: hidden;
   flex-shrink: 0;
@@ -2442,8 +2444,8 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 .about-services-card-body {
-  padding: 24px 22px 28px;
-  flex: 1;
+  padding: 20px 18px 22px;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
 }
@@ -2495,6 +2497,9 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 16px;
+  position: relative;
+  z-index: 2;
   clear: both;
 }
 

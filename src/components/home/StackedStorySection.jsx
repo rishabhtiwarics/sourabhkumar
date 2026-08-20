@@ -178,10 +178,11 @@ export default function StackedStorySection() {
 
       gsap.from(".about-services-card", {
         opacity: 0,
-        y: 40,
+        y: 35,
         duration: 0.8,
         stagger: 0.15,
         ease: "power3.out",
+        clearProps: "all",
         scrollTrigger: {
           trigger: gridRef.current,
           start: "top 82%",
