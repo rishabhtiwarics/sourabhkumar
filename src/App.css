@@ -1,9 +1,9 @@
 
   :root{
-    --deep:#012F25;      /* deep pine â€” text, sidebar bg */
-    --teal:#035D4E;      /* primary teal â€” buttons, accents */
+    --deep:#012F25;      /* deep pine ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â text, sidebar bg */
+    --teal:#035D4E;      /* primary teal ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â buttons, accents */
     --teal-soft:#0C7A65;
-    --mist:#F4F1E9;      /* warm off-white â€” used for text-on-dark */
+    --mist:#F4F1E9;      /* warm off-white ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â used for text-on-dark */
     --mist-dim:#EAE6DA;
     --page-bg:#FFFFFF;   /* body / page background */
     --gold:#D9A455;      /* muted gold accent */
@@ -22,7 +22,7 @@
   h1,h2,h3{font-family:'Fraunces', serif;}
   a{color:inherit;}
 
-  /* ============ TOP BAR â€” white ============ */
+  /* ============ TOP BAR ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â white ============ */
   .topbar{
     background:#FFFFFF;
     font-size:13px;
@@ -70,12 +70,12 @@
   .rotator-item.active{transform:translateY(0);opacity:1;}
   .rotator-item.exit{transform:translateY(-100%);opacity:0;}
   .topbar-right{gap:14px;}
-  /* ============ PAGE WRAP â€” margin around hero, body colour bleeds through ============ */
+  /* ============ PAGE WRAP ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â margin around hero, body colour bleeds through ============ */
   .page-wrap{
     padding:0 22px 0;
   }
 
-  /* ============ HERO â€” inset card with its own bg image + overlay ============ */
+  /* ============ HERO ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â inset card with its own bg image + overlay ============ */
   .hero{
     position:relative;
     min-height:88vh;
@@ -656,7 +656,7 @@
       padding:36px 28px;
     }
   }
-  /* ============ SIDEBAR (off-canvas, floats with margin, leftâ†’right slide) ============ */
+  /* ============ SIDEBAR (off-canvas, floats with margin, leftÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢right slide) ============ */
   .sidebar-overlay{
     position:fixed;inset:0;
     background:rgba(1,47,37,0.45);
@@ -1614,7 +1614,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 /* ================================================================
-   TRUST PILLARS SECTION — tps-
+   TRUST PILLARS SECTION ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â tps-
    ================================================================ */
 .tps-wrap {
   margin-top: 40px;
@@ -1731,7 +1731,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 /* ================================================================
-   RECOVERY PATH SECTION — rp-
+   RECOVERY PATH SECTION ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â rp-
    ================================================================ */
 .rp-section {
   background: var(--page-bg);
@@ -1834,7 +1834,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 @media (max-width: 980px) and (min-width: 769px) { .rp-section { padding-left: 44px; padding-right: 44px; } }
 
 /* ================================================================
-   SYMPTOM RELIEF SECTION — srs-
+   SYMPTOM RELIEF SECTION ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â srs-
    ================================================================ */
 .srs-wrap { margin-top: 60px; margin-bottom: 0px; }
 .srs-card-container { position: relative; background: var(--deep); border-radius: 28px; padding: 70px 40px; overflow: hidden; width: 100%; }
@@ -1942,7 +1942,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 @media (max-width: 520px) { .faq-question { padding: 16px; gap: 10px; font-size: 13.5px; } .faq-answer { padding-left: 56px; padding-right: 16px; font-size: 12.8px; } }
 
 /* ================================================================
-   MARQUEE BANNER — mqb-
+   MARQUEE BANNER ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â mqb-
    ================================================================ */
 .mqb-wrap {
   padding: 0;
@@ -2210,6 +2210,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 
 .modal-field input[type="text"],
 .modal-field input[type="tel"],
+.modal-field input[type="url"],
 .modal-field textarea {
   width: 100%;
   padding: 12px 14px;
@@ -2226,12 +2227,14 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 
 .modal-field input[type="text"]::placeholder,
 .modal-field input[type="tel"]::placeholder,
+.modal-field input[type="url"]::placeholder,
 .modal-field textarea::placeholder {
   color: rgba(1, 47, 37, 0.55);
 }
 
 .modal-field input[type="text"]:focus,
 .modal-field input[type="tel"]:focus,
+.modal-field input[type="url"]:focus,
 .modal-field textarea:focus {
   border-color: var(--gold);
   background: #FFFFFF;
@@ -2284,8 +2287,8 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(135deg, #D9A455 0%, #E7B968 100%);
-  color: var(--deep);
+  background: linear-gradient(135deg, var(--teal-soft) 0%, var(--teal) 100%);
+  color: var(--gold);
   font-weight: 800;
   font-size: 14.5px;
   padding: 13px 20px;
@@ -2340,7 +2343,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 /* ================================================================
-   ABOUT OUR SERVICES SECTION — full semantic A to Z class names
+   ABOUT OUR SERVICES SECTION ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â full semantic A to Z class names
    ================================================================ */
 .about-services-section {
   position: relative;
@@ -2484,6 +2487,16 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
   color: var(--deep);
 }
 
+.about-services-icon-badge.is-highlight {
+  background: linear-gradient(135deg, #D9A455 0%, #E7B968 100%);
+  color: var(--deep);
+}
+
+.about-services-card:hover .about-services-icon-badge.is-highlight {
+  background: linear-gradient(135deg, var(--teal-soft) 0%, var(--teal) 100%);
+  color: var(--gold);
+}
+
 .about-services-card:hover .about-services-icon-badge svg {
   transform: rotate(8deg) scale(1.05);
 }
@@ -2607,7 +2620,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 
 /* ================================================================
-   ABOUT PAGE HERO — full semantic selectors (mirrors .hero styles)
+   ABOUT PAGE HERO ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â full semantic selectors (mirrors .hero styles)
    ================================================================ */
 .inner-hero {
   position: relative;
@@ -2736,7 +2749,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 .inner-hero-btn-ghost:hover .inner-hero-icon-circle--ghost { background: var(--gold); }
 
-/* ── Breakpoints (mirror exactly) ─────────────────────────────── */
+/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Breakpoints (mirror exactly) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
 @media (max-width: 1440px) {
   .inner-hero-content { padding-left: 36px; padding-right: 36px; }
 }
@@ -2814,3 +2827,213 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 
 
 
+
+/* ================================================================
+   CAREERS BANNER & MODAL
+   ================================================================ */
+.career-banner-section {
+  background: var(--page-bg);
+  padding: 0 22px 22px;
+}
+.career-banner {
+  position: relative;
+  max-width: 1280px;
+  min-height: 132px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  background: var(--deep);
+}
+.career-banner-photo {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--deep) 0%, rgba(1,47,37,0.55) 38%, rgba(1,47,37,0.15) 68%, rgba(1,47,37,0) 100%),
+    url('https://images.unsplash.com/photo-1540205895360-4ad4cffb3aa8?fm=jpg&q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+.career-banner-copy {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 28px;
+  background: linear-gradient(90deg, var(--deep) 55%, rgba(1,47,37,0) 100%);
+}
+.career-banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.career-banner-eyebrow::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  display: inline-block;
+  background: var(--gold);
+}
+.career-banner-copy h2 {
+  max-width: 430px;
+  color: var(--mist);
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 5px;
+}
+.career-banner-copy p {
+  max-width: 420px;
+  color: rgba(244,241,233,.72);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+.career-banner-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 22px 28px 22px 0;
+}
+.career-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: var(--gold);
+  color: var(--deep);
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 13.5px;
+  padding: 8px 8px 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform .2s, background .2s, box-shadow .2s;
+}
+.career-banner-btn .icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--deep);
+  color: var(--mist);
+}
+.career-banner-btn:hover {
+  background: #E7B968;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(217,164,85,.22);
+}
+.careers-modal-card-wrapper,
+.careers-modal-eb-wrapper {
+  max-width: 620px;
+}
+.careers-modal-card {
+  padding: 34px 30px 28px;
+}
+.careers-eb-main-card {
+  filter: url(#turbulent-displace-careers);
+}
+.careers-badge {
+  background: var(--gold);
+}
+.careers-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.careers-upload-field input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.careers-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 108px;
+  padding: 18px;
+  border: 1.5px dashed rgba(217,164,85,.58);
+  border-radius: 16px;
+  background: rgba(244,241,233,.12);
+  color: var(--mist);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+.careers-upload-box:hover {
+  border-color: var(--gold);
+  background: rgba(244,241,233,.18);
+  transform: translateY(-1px);
+}
+.careers-upload-title {
+  max-width: 100%;
+  color: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.careers-upload-note {
+  margin-top: 6px;
+  color: rgba(244,241,233,.68);
+  font-size: 12px;
+  font-weight: 600;
+}
+@media (max-width: 860px) {
+  .career-banner-section {
+    padding: 0 14px 18px;
+  }
+  .career-banner {
+    min-height: auto;
+    flex-direction: column;
+  }
+  .career-banner-photo {
+    background:
+      linear-gradient(180deg, var(--deep) 0%, rgba(1,47,37,0.56) 48%, rgba(1,47,37,0.16) 100%),
+      url('https://images.unsplash.com/photo-1540205895360-4ad4cffb3aa8?fm=jpg&q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  }
+  .career-banner-copy {
+    background: linear-gradient(180deg, var(--deep) 58%, rgba(1,47,37,.75) 100%);
+    padding: 22px 20px 8px;
+  }
+  .career-banner-actions {
+    padding: 8px 20px 22px;
+  }
+  .careers-field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .career-banner-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .career-banner {
+    border-radius: 0;
+  }
+  .career-banner-copy h2 {
+    font-size: 20px;
+  }
+  .careers-modal-card {
+    padding: 28px 20px 24px;
+  }
+  .careers-upload-box {
+    min-height: 96px;
+    padding: 16px 12px;
+  }
+}

@@ -11,6 +11,7 @@ export default function Sidebar({ isOpen, onClose }) {
     { label: "About",    to: "/about",  type: "route" },
     { label: "Services", to: "/services", type: "route" },
     { label: "Contact",  to: "/contact",  type: "route" },
+    { label: "Careers",  to: "#careers", type: "hash" },
   ];
 
   return (

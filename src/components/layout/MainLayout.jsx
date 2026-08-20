@@ -7,24 +7,34 @@ import CustomCursor from "../common/CustomCursor.jsx";
 import ScrollProgressIndicator from "../common/ScrollProgressIndicator.jsx";
 import FloatingContactWidget from "../common/FloatingContactWidget.jsx";
 import ConsultationModal from "../common/ConsultationModal.jsx";
+import CareersModal from "../common/CareersModal.jsx";
 
 export default function MainLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
+  const [isCareersModalOpen, setIsCareersModalOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = isSidebarOpen || isBookModalOpen ? "hidden" : "";
+    document.body.style.overflow = isSidebarOpen || isBookModalOpen || isCareersModalOpen ? "hidden" : "";
     
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setIsSidebarOpen(false);
         setIsBookModalOpen(false);
+        setIsCareersModalOpen(false);
       }
     };
 
     const handleGlobalClick = (e) => {
-      const trigger = e.target.closest('a[href*="#book"], .btn-book, .footer-cta-link, [data-open-modal="book"]');
-      if (trigger) {
+      const careersTrigger = e.target.closest('[data-open-modal="careers"], a[href="#careers"]');
+      if (careersTrigger) {
+        e.preventDefault();
+        setIsCareersModalOpen(true);
+        return;
+      }
+
+      const bookTrigger = e.target.closest('a[href*="#book"], .btn-book, .footer-cta-link, [data-open-modal="book"]');
+      if (bookTrigger) {
         e.preventDefault();
         setIsBookModalOpen(true);
       }
@@ -37,7 +47,7 @@ export default function MainLayout() {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleGlobalClick);
     };
-  }, [isSidebarOpen, isBookModalOpen]);
+  }, [isSidebarOpen, isBookModalOpen, isCareersModalOpen]);
 
   return (
     <>
@@ -51,6 +61,7 @@ export default function MainLayout() {
       <Footer />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <ConsultationModal isOpen={isBookModalOpen} onClose={() => setIsBookModalOpen(false)} />
+      <CareersModal isOpen={isCareersModalOpen} onClose={() => setIsCareersModalOpen(false)} />
     </>
   );
 }

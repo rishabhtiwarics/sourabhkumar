@@ -221,7 +221,7 @@ export default function StackedStorySection() {
                 <img src={step.image} alt={step.alt} loading="lazy" />
               </div>
               <div className="about-services-card-body">
-                <span className="about-services-icon-badge">{step.icon}</span>
+                <span className={`about-services-icon-badge ${step.id === "therapy" ? "is-highlight" : ""}`}>{step.icon}</span>
                 <h3 className="about-services-card-title">{step.title}</h3>
                 <p className="about-services-card-desc">{step.desc}</p>
               </div>
