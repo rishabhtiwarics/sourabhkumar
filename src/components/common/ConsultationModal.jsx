@@ -43,8 +43,10 @@ export default function ConsultationModal({ isOpen, onClose }) {
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      {/* SVG Filter for Electric Border Turbulence */}
-      <svg className="eb-svg-container" aria-hidden="true">
+      {/* Card Wrapper with background */}
+      <div className="modal-card-wrapper">
+        {/* SVG Filter for Electric Border Turbulence */}
+        <svg className="eb-svg-container" aria-hidden="true">
         <defs>
           <filter id="turbulent-displace-cta" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
             <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
@@ -155,5 +157,6 @@ export default function ConsultationModal({ isOpen, onClose }) {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
