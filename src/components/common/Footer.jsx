@@ -21,10 +21,7 @@ export default function Footer() {
 
         {/* Logo — always navigates to home root */}
         <Link to="/" className="footer-logo">
-          <span className="mark">
-            <HeartIcon size={16} />
-          </span>
-          MoveO Health
+          <img src="/img/moveO_logo.png" alt="MoveO Health Logo" className="footer-logo-img" />
         </Link>
 
         <p className="footer-about">

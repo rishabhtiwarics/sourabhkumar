@@ -19,10 +19,7 @@ export default function Sidebar({ isOpen, onClose }) {
       <aside className={`sidebar ${isOpen ? "active" : ""}`} id="sidebar">
         <div className="sidebar-top">
           <div className="sidebar-logo">
-            <span className="mark">
-              <HeartIcon size={16} />
-            </span>
-            <span className="sidebar-logo-text">MoveO Health</span>
+            <img src="/img/moveO_logo.png" alt="MoveO Health Logo" className="sidebar-logo-img" />
           </div>
           <button className="close-btn" type="button" aria-label="Close menu" onClick={onClose}>
             <CloseIcon />

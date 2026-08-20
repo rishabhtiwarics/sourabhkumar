@@ -37,30 +37,46 @@ const CertIcon = () => (
   </svg>
 );
 
+const CalendarIcon = () => (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+    <line x1="16" y1="2" x2="16" y2="6"/>
+    <line x1="8" y1="2" x2="8" y2="6"/>
+    <line x1="3" y1="10" x2="21" y2="10"/>
+  </svg>
+);
+
 const STEPS = [
   {
     num: "01",
-    icon: <TargetIcon />,
-    title: "Personalized Plan",
-    desc: "Designed around your condition, lifestyle, and recovery goals.",
+    icon: <CalendarIcon />,
+    title: "Book Your Visit",
+    desc: "Call us or send a WhatsApp message to choose a convenient date and time for your home physiotherapy session.",
   },
   {
     num: "02",
-    icon: <CertIcon />,
-    title: "Certified Therapists",
-    desc: "Trusted, licensed experts guiding every stage of rehabilitation.",
+    icon: <HomeIcon />,
+    title: "Assessment at Home",
+    desc: "Our qualified physiotherapist visits your home to understand your pain, movement problems, medical history, and daily difficulties.",
   },
   {
     num: "03",
-    icon: <HomeIcon />,
-    title: "Home Physiotherapy",
-    desc: "Convenient treatment and comfortable recovery, right at your home.",
+    icon: <TargetIcon />,
+    title: "Personal Treatment Plan",
+    desc: "Based on your assessment, we create a treatment plan according to your condition, lifestyle, and recovery goals.",
   },
   {
     num: "04",
     icon: <HeartIcon />,
-    title: "Comfortable Recovery",
-    desc: "Evidence-based care that supports faster, stress-free healing.",
+    title: "Treatment and Exercise Guidance",
+    desc: "You receive safe physiotherapy treatment at home and learn simple exercises and posture tips.",
+  },
+  {
+    num: "05",
+    icon: <CertIcon />,
+    title: "Follow-Up and Progress Review",
+    desc: "We regularly check your improvement, answer your questions, and adjust your treatment plan when needed.",
   },
 ];
 

@@ -1,6 +1,7 @@
 import HeroSection from "../components/home/HeroSection.jsx";
 import TrustPillarsSection from "../components/home/TrustPillarsSection.jsx";
 import ConsultationSection from "../components/home/ConsultationSection.jsx";
+import StackedStorySection from "../components/home/StackedStorySection.jsx";
 import ServiceAvailabilitySection from "../components/home/ServiceAvailabilitySection.jsx";
 import FAQSection from "../components/home/FAQSection.jsx";
 import RecoveryPathSection from "../components/home/RecoveryPathSection.jsx";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <TrustPillarsSection />
       <ConsultationSection />
+      <StackedStorySection />
       <RecoveryPathSection />
       <SymptomReliefSection />
       <ServiceAvailabilitySection />

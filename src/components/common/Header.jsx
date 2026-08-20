@@ -7,10 +7,7 @@ import { CalendarIcon, ClockIcon, HeartIcon, LocationIcon, MailIcon, MenuIcon, P
 function Logo() {
   return (
     <Link to="/" className="logo">
-      <span className="mark">
-        <HeartIcon />
-      </span>
-      MoveO Health
+      <img src="/img/moveO_logo.png" alt="MoveO Health Logo" className="header-logo-img" />
     </Link>
   );
 }

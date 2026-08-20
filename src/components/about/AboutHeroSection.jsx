@@ -1,6 +1,5 @@
 import { CalendarIcon, PhoneIcon } from "../common/Icons.jsx";
 
-
 export default function AboutHeroSection() {
   return (
     <div className="page-wrap">
