@@ -3,10 +3,10 @@ import { CalendarIcon, PhoneIcon } from "../common/Icons.jsx";
 export default function AboutHeroSection() {
   return (
     <div className="page-wrap">
-      <section className="hero" id="about">
-        <div className="hero-content">
-          <div className="hero-copy">
-            <span className="eyebrow">About Moveo Health</span>
+      <section className="about-hero" id="about">
+        <div className="about-hero-content">
+          <div className="about-hero-copy">
+            <span className="about-hero-eyebrow">About Moveo Health</span>
 
             <h1>
               Recovery, guided by a therapist,
@@ -20,15 +20,15 @@ export default function AboutHeroSection() {
               somewhere familiar and comfortable.
             </p>
 
-            <div className="hero-cta">
-              <a href="/#book" className="btn-book">
-                <span className="icon-circle">
+            <div className="about-hero-cta">
+              <a href="/#book" className="about-hero-btn-book">
+                <span className="about-hero-icon-circle">
                   <CalendarIcon stroke="#012F25" />
                 </span>
                 <span className="label">Book Consultation</span>
               </a>
-              <a href="tel:+917007066934" className="btn-ghost">
-                <span className="icon-circle">
+              <a href="tel:+917007066934" className="about-hero-btn-ghost">
+                <span className="about-hero-icon-circle about-hero-icon-circle--ghost">
                   <PhoneIcon size={16} stroke="#F4F1E9" />
                 </span>
                 <span className="call-now-text">
