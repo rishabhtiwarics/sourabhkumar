@@ -164,28 +164,36 @@ export default function StackedStorySection() {
 
   /* GSAP Scroll Animations */
   useEffect(() => {
+    const cards = gridRef.current?.querySelectorAll(".about-services-card");
+    if (!cards) return;
+
+    // Set initial state immediately so layout is correct
+    gsap.set(headRef.current, { opacity: 0, y: 28 });
+    gsap.set(cards, { opacity: 0, y: 32 });
+
     const ctx = gsap.context(() => {
-      gsap.from(headRef.current, {
-        opacity: 0,
-        y: 30,
+      gsap.to(headRef.current, {
+        opacity: 1,
+        y: 0,
         duration: 0.85,
         ease: "power3.out",
+        clearProps: "all",
         scrollTrigger: {
           trigger: headRef.current,
           start: "top 85%",
         },
       });
 
-      gsap.from(".about-services-card", {
-        opacity: 0,
-        y: 35,
+      gsap.to(cards, {
+        opacity: 1,
+        y: 0,
         duration: 0.8,
         stagger: 0.15,
         ease: "power3.out",
         clearProps: "all",
         scrollTrigger: {
           trigger: gridRef.current,
-          start: "top 82%",
+          start: "top 85%",
         },
       });
     }, sectionRef);
