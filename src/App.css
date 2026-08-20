@@ -2833,7 +2833,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
    ================================================================ */
 .career-banner-section {
   background: var(--page-bg);
-  padding: 0 22px 22px;
+  padding: 0 22px;
 }
 .career-banner {
   position: relative;
@@ -2996,7 +2996,7 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
 }
 @media (max-width: 860px) {
   .career-banner-section {
-    padding: 0 14px 18px;
+    padding: 0 14px;
   }
   .career-banner {
     min-height: auto;
