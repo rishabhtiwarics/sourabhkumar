@@ -1,9 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowIcon, CloseIcon } from "./Icons.jsx";
 
 export default function CareersModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
   const [resumeName, setResumeName] = useState("");
+  const formRef = useRef(null);
+  const scrollThumbRef = useRef(null);
+
+  const updateFormScrollProgress = () => {
+    const form = formRef.current;
+    const thumb = scrollThumbRef.current;
+    if (!form || !thumb) return;
+
+    const scrollableHeight = form.scrollHeight - form.clientHeight;
+    const progress = scrollableHeight > 0 ? form.scrollTop / scrollableHeight : 0;
+    thumb.style.transform = `translateY(${Math.min(progress, 1) * 100 - 100}%)`;
+  };
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -22,6 +34,18 @@ export default function CareersModal({ isOpen, onClose }) {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, onClose]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const frameId = window.requestAnimationFrame(updateFormScrollProgress);
+    window.addEventListener("resize", updateFormScrollProgress);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("resize", updateFormScrollProgress);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -77,7 +101,7 @@ export default function CareersModal({ isOpen, onClose }) {
                 <CloseIcon />
               </button>
 
-              <form className="modal-form careers-form" onSubmit={handleSubmit}>
+              <form className="modal-form careers-form" ref={formRef} onScroll={updateFormScrollProgress} onSubmit={handleSubmit}>
                 <div className="modal-header">
                   <span className="modal-free-badge careers-badge">Careers</span>
                   <h2 id="careers-modal-title" className="modal-form-title">Apply as a physiotherapist</h2>
@@ -137,6 +161,10 @@ export default function CareersModal({ isOpen, onClose }) {
                   <p className="modal-fine-text">We review every application with care.</p>
                 </div>
               </form>
+
+              <div className="careers-modal-scroll-indicator" aria-hidden="true">
+                <div className="careers-modal-scroll-indicator__thumb" ref={scrollThumbRef} />
+              </div>
             </div>
           </div>
         </div>
