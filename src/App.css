@@ -3037,3 +3037,151 @@ a.popup-value:hover { color: var(--teal, #035d4e); }
     padding: 16px 12px;
   }
 }
+@media (max-width: 520px) {
+  .careers-modal-overlay {
+    align-items: flex-start;
+    padding: 10px 8px;
+    overflow-y: auto;
+  }
+
+  .careers-modal-card-wrapper,
+  .careers-modal-eb-wrapper {
+    width: min(100%, 360px);
+    max-width: calc(100vw - 16px);
+    border-radius: 22px;
+  }
+
+  .careers-modal-card-wrapper {
+    margin: 0 auto;
+  }
+
+  .careers-modal-eb-wrapper .eb-content-container {
+    border-radius: 20px;
+    overflow: visible;
+  }
+
+  .careers-modal-eb-wrapper .eb-inner-container,
+  .careers-modal-eb-wrapper .eb-border-outer,
+  .careers-modal-eb-wrapper .eb-main-card,
+  .careers-modal-eb-wrapper .eb-glow-layer-1,
+  .careers-modal-eb-wrapper .eb-glow-layer-2 {
+    border-radius: 22px;
+  }
+
+
+  .careers-modal-card {
+    max-height: calc(100dvh - 20px);
+    overflow: hidden;
+    padding: 24px 18px 20px;
+    border-radius: 20px;
+  }
+
+  .careers-modal-card .modal-close-btn {
+    top: 16px;
+    right: 16px;
+  }
+
+  .careers-form {
+    max-height: calc(100dvh - 60px);
+    gap: 12px;
+    overflow-y: auto;
+    padding-right: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(217,164,85,.82) rgba(244,241,233,.12);
+  }
+
+  .careers-form::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .careers-form::-webkit-scrollbar-track {
+    background: rgba(244,241,233,.12);
+    border-radius: 999px;
+  }
+
+  .careers-form::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gold), var(--teal));
+    border-radius: 999px;
+  }
+
+  .careers-form .modal-header {
+    margin-bottom: 4px;
+    padding-right: 42px;
+  }
+
+  .careers-form .modal-form-title {
+    max-width: 220px;
+    font-size: 21px;
+    line-height: 1.12;
+  }
+
+  .careers-form .modal-form-sub {
+    font-size: 13px;
+    line-height: 1.38;
+  }
+
+  .careers-upload-box {
+    min-height: 82px;
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .careers-upload-title {
+    font-size: 13px;
+  }
+
+  .careers-upload-note,
+  .careers-form .modal-fine-text {
+    font-size: 11.5px;
+  }
+
+  .careers-field-grid {
+    gap: 10px;
+  }
+
+  .careers-form .modal-field {
+    gap: 5px;
+  }
+
+  .careers-form .modal-field label {
+    font-size: 12px;
+  }
+
+  .careers-form .modal-field input[type="text"],
+  .careers-form .modal-field input[type="url"] {
+    min-height: 42px;
+    padding: 10px 13px;
+    font-size: 13.5px;
+    border-radius: 11px;
+  }
+
+  .careers-form .modal-actions {
+    margin-top: 2px;
+    gap: 7px;
+  }
+
+  .careers-form .modal-submit-btn {
+    min-height: 46px;
+    padding: 12px 18px;
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 340px) {
+  .careers-modal-overlay {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .careers-modal-card-wrapper,
+  .careers-modal-eb-wrapper {
+    max-width: calc(100vw - 12px);
+  }
+
+  .careers-modal-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
